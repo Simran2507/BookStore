@@ -18,7 +18,8 @@ const AddBooks = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/add", Data).then((res) => console.log(res.data.message));
+    console.log(process.env.REACT_APP_API_URL)
+    await axios.post(`${process.env.REACT_APP_API_URL}/add`, Data).then((res) => console.log(res.data.message));
     setData({
       name:"",
       author:"",

@@ -8,7 +8,7 @@ const BooksSection = ({data}) => {
     const deleteHandler = async (id) => {
         try {
             console.log(id);
-          await axios.delete(`http://localhost:4000/deleteBook/${id}`);
+          await axios.delete(`${process.env.REACT_APP_API_URL}/deleteBook/${id}`);
           console.log('Book deleted successfully');
         } catch (error) {
           console.error('Error deleting book:', error);

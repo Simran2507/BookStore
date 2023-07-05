@@ -14,8 +14,6 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route path="/books" element={<Books/>}/>
         <Route path="/addBooks" element={<AddBooks/>} />
-        {/* <Route path="/update" element={<UpdateBook/>}></Route> */}
-        {/* <Route exact path="/update/:id" render={(props) => <UpdateBook bookId={props.match.params.id} />} /> */}
         <Route path="/update/:id" element={<UpdateBook/>} />
       </Routes>
     </Router>

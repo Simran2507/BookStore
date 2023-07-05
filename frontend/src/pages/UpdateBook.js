@@ -16,7 +16,7 @@ const UpdateBook = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/getBook/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/getBook/${id}`);
         const bookData = response.data.data;
         setData(bookData);
       } catch (error) {
@@ -35,7 +35,7 @@ const UpdateBook = () => {
   const updateHandler = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4000/update/${id}`, data);
+      await axios.put(`${process.env.REACT_APP_API_URL}/update/${id}`, data);
       console.log('Book updated successfully');
     } catch (error) {
       console.error('Error updating book:', error);

@@ -10,10 +10,12 @@ const Books = () => {
     const [Data,setData]= useState();
     useEffect(() => {
         const fetch = async () => {
-            await axios.get("http://localhost:4000/getBooks").then((res) => setData(res.data.data));
+            console.log(process.env.REACT_APP_API_URL)
+            await axios.get((`${process.env.REACT_APP_API_URL}/getBooks`)).then((res) => setData(res.data.data));
+            
         };
         fetch();
-    })
+    },[])
   return (
     <div className="bg-dark" style={{minHeight: "91.5vh"}}>
         <div className="d-flex justify-content-center align-items-center py-3" >
