@@ -10,7 +10,7 @@ app.use(cors());
 connection();
 
 app.get('/',(req, res) => {
-    res.send("Server Runing on port 3000")
+    res.send(`Server Runing on port ${port}`)
 })
 
 app.use(express.json());
