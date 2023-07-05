@@ -1,0 +1,16 @@
+
+.custom-loader {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,#bab8d3);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation:s3 1s infinite linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  @keyframes s3 {to{transform: rotate(1turn)}}
